@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WWKNPQQ');
+        </script>
+        <!-- End Google Tag Manager -->
+        <meta charset="UTF-8">
+        <title>dialog</title>
+        <script src="DOMPurify-main/dist/purify.js"></script>
+        <link rel="stylesheet" href="styles/dialogs.css">
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWKNPQQ"
+            height="0" width="0" style="display:none;visibility:hidden">
+            </iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <header>
+            <nav>
+                <li><a href="/">Return Home</a></li>
+                <li><a href="/nativedialogs.html">Dialogs</a></li>
+                <li><a href="/crud.html">CRUD</a></li>
+                <li><a href="/styledcrud.html">Styled CRUD</a></li>
+            </nav>
+        </header>
+        <main>
+            <section id="native-buttons">
+                <h1>Simple Dialogs</h1>
+                <button id="alert-button">Alert</button>
+                <button id="confirm-button">Confirm</button>
+                <button id="prompt-button">Prompt</button>
+                <button id="safer-prompt-button">Safer Prompt</button>
+                <output id="out"></output>
+            </section>
+            <section id="custom-buttons">
+                <h2>Custom Buttons</h2>
+                <button id="custom-alert-button">Alert</button>
+                <button id="custom-confirm-button">Confirm</button>
+                <button id="custom-prompt-button">Prompt</button>
+                <output id="custom-out"></output>
+            </section>
+            <dialog id="dialog" class="hidden">
+                <p id="dialog-msg"></p>
+                <div id="dialog-input-box">
+                    <label for="dialog-prompt-input">what is your name?</label>
+                    <input type="text" id="dialog-prompt-input">
+                </div>
+                <hr>
+                <div id="dialog-button-box">
+                    <button id="dialog-cancel-button">Cancel</button>
+                    <button id="dialog-ok-button">Ok</button>
+                </div>
+            </dialog>
+        </main>
+    </body>
+    <script src="/scripts/nativedialog.js"></script>
+    <script type="module">
+        import { customAlert, customConfirm, customPrompt, initCustomDialog, currentDialog } from '/scripts/customdialog.js';
+        initCustomDialog();
+    </script>
+</html>
