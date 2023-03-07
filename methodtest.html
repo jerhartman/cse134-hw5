@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-WWKNPQQ');
+        </script>
+        <!-- End Google Tag Manager -->
+        <meta charset="UTF-8">
+        <title>method tests</title>
+        <script src="DOMPurify-main/dist/purify.js"></script>
+        <link rel="stylesheet" href="styles/methods.css">
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWKNPQQ"
+            height="0" width="0" style="display:none;visibility:hidden">
+            </iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <header>
+            <nav>
+                <li><a href="/">Return Home</a></li>
+                <li><a href="/methodtest.html">Method Test</a></li>
+                <li><a href="/webcomponent.html">Web Component</a></li>
+            </nav>
+        </header>
+        <main>
+            <div id="section-box">
+                <section id="form-section">
+                    <h1>Article Methods</h1>
+                    <form action="" id="methods-form">
+                        <!-- article id -->
+                        <label for="id">Article ID</label>
+                        <input type="text" id="id" name="id">
+                        <!-- article name -->
+                        <label for="article_name">Article Name</label>
+                        <input type="text" id="article_name" name="article_name">
+                        <!-- body of article -->
+                        <label for="article_body">Article Body</label>
+                        <textarea name="article_body" id="article_body"></textarea>
+                        <!-- radio buttons to choose the request API -->
+                        <label for="request-api">Request API:</label>
+                        <input type="radio" id="fetch" name="request-api" value="fetch" checked>
+                        <label for="fetch" class="radio-label">Fetch</label>
+                        <input type="radio" id="xhr" name="request-api" value="xhr">
+                        <label for="xhr" class="radio-label">XMLHttpRequest</label>
+                        <!-- hidden date input -->
+                        <input type="hidden" id="date" name="date" value="">
+                        <!-- buttons -->
+                        <div id="button-box">
+                            <button type="submit" id="postBtn" value="post">Post</button>
+                            <button type="submit" id="getBtn" value="get">Get</button>
+                            <button type="submit" id="putBtn" value="put">Put</button>
+                            <button type="submit" id="deleteBtn" value="delete">Delete</button>
+                        </div>
+                    </form>
+                </section>
+                <section id="output-section">
+                    <h2>Response</h2>
+                    <!-- store responses here -->
+                    <output id="response"></output>
+                </section>
+            </div>
+        </main>
+    </body>
+    <script type="module">
+        import { pageInit } from '/scripts/methodtest.js';
+        window.addEventListener("load", pageInit());
+    </script>
+</html>
