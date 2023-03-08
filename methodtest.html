@@ -37,7 +37,7 @@
                     <form action="" id="methods-form">
                         <!-- article id -->
                         <label for="id">Article ID</label>
-                        <input type="text" id="id" name="id">
+                        <input type="text" id="id" name="id" required>
                         <!-- article name -->
                         <label for="article_name">Article Name</label>
                         <input type="text" id="article_name" name="article_name">
@@ -61,10 +61,13 @@
                         </div>
                     </form>
                 </section>
-                <section id="output-section">
+                <section id="output-section" class="invisible">
                     <h2>Response</h2>
                     <!-- store responses here -->
-                    <output id="response"></output>
+                    <output id="response">
+                        <ul id="display-list"></ul>
+                    </output>
+                    <button id="clear-button">Clear</button>
                 </section>
             </div>
         </main>

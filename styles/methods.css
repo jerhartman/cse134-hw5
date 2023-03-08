@@ -28,6 +28,9 @@
 .hidden {
     display: none;
 }
+.invisible {
+    opacity: 0;
+}
 header {
     padding-left: 10%;
     font-family: 'Muli', sans-serif;
@@ -54,7 +57,7 @@ nav a {
 nav a:hover {
     color: var(--pure-white);
 }
-li {
+nav li {
     display: inline-block;
     padding-right: 2rem;
 }
@@ -70,6 +73,7 @@ main {
 #section-box {
     display: flex;
     justify-content: space-evenly;
+    align-items: flex-start;
     gap: 2rem;
 }
 section {
@@ -124,4 +128,12 @@ textarea {
 label.radio-label {
     display: inline;
     margin-right: 2rem;
+}
+/* response -------------------------------------------------- */
+ul {
+    padding-left: 2rem;
+}
+#display-list {
+    margin: 1rem 0;
+    padding-bottom: 1rem;
 }
