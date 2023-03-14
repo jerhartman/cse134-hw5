@@ -5,9 +5,9 @@
 // ButtonCount component
 function ButtonCount() {
     // number of times clicked
-    let [count, setCount] = React.useState(0);
+    let [count, increment] = React.useState(0);
     function buttonClicked() {
-        setCount(count + 1);
+        increment(count + 1);
     }
     // return button element
     return React.createElement(
@@ -26,9 +26,7 @@ function addVueButton() {
     let buttonCount = {
         template: '<button class="button-count" @click="count++">Times Clicked: {{ count }}</button>',
         data() {
-            return {
-                count: 0
-            }
+            return { count: 0 }
         }
     }
 
