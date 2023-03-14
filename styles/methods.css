@@ -85,7 +85,7 @@ section {
     border: 0.1rem solid var(--one-in-mil-gray);
     border-radius: 1rem;
 }
-button[type='submit'] {
+button[type='submit'], #clear-button {
     padding: 0.6rem 1rem;
     font-size: 0.8rem;
     color: var(--gray-white);
@@ -95,7 +95,7 @@ button[type='submit'] {
     cursor: pointer;
     transition: all var(--link-trans-time) ease-in-out;
 }
-button[type='submit']:hover {
+button[type='submit']:hover, #clear-button:hover {
     transform: translateY(-2px);
     background-color: #555;
     color: var(--one-in-mil-gray);
