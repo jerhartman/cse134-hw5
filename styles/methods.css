@@ -85,7 +85,7 @@ section {
     border: 0.1rem solid var(--one-in-mil-gray);
     border-radius: 1rem;
 }
-button {
+button[type='submit'] {
     padding: 0.6rem 1rem;
     font-size: 0.8rem;
     color: var(--gray-white);
@@ -95,7 +95,7 @@ button {
     cursor: pointer;
     transition: all var(--link-trans-time) ease-in-out;
 }
-button:hover {
+button[type='submit']:hover {
     transform: translateY(-2px);
     background-color: #555;
     color: var(--one-in-mil-gray);
@@ -136,4 +136,20 @@ ul {
 #display-list {
     margin: 1rem 0;
     padding-bottom: 1rem;
+}
+
+/* react component css --------------------------------------- */
+.button-count {
+    margin: 1rem 1rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+    background-color: var(--gray-white);
+    border: 0.1rem solid var(--one-in-mil-gray);
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: all var(--link-trans-time) ease-in-out;
+}
+.button-count:hover {
+    transform: translateY(-2px);
+    background-color: var(--one-in-mil-gray);
 }
