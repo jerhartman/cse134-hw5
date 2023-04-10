@@ -21,10 +21,10 @@ function postRequest(formInput) {
             console.log('error in fetch request for post');
         });
     }
-    // if fetch not checked, we are using xhruest
+    // if fetch not checked, we are using XMLHttpRequest
     else {
-        console.log('xhruest chosen for post');
-        let xhr = new xhruest();
+        console.log('XMLHttpRequest chosen for post');
+        let xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://httpbin.org/post', true);
         xhr.send(formInput);
         xhr.onload = function() {
@@ -37,7 +37,7 @@ function postRequest(formInput) {
             }
         };
         xhr.onerror = function() {
-            console.log('error in xhruest for post');
+            console.log('error in XMLHttpRequest for post');
         };
     }
 }
@@ -60,10 +60,10 @@ function getRequest(articleID, articleName, date) {
             console.log('error in fetch request for get');
         });
     }
-    // if fetch not checked, we are using xhruest
+    // if fetch not checked, we are using XMLHttpRequest
     else {
-        console.log('xhruest chosen for get');
-        let xhr = new xhruest();
+        console.log('XMLHttpRequest chosen for get');
+        let xhr = new XMLHttpRequest();
         xhr.open('GET', `https://httpbin.org/get?id=${articleID}&article_name=${articleName}&date=${date}`, true);
         xhr.send();
         xhr.onload = function() {
@@ -76,7 +76,7 @@ function getRequest(articleID, articleName, date) {
             }
         };
         xhr.onerror = function() {
-            console.log('error in xhruest for get');
+            console.log('error in XMLHttpRequest for get');
         };
     }
 }
@@ -99,10 +99,10 @@ function putRequest(formInput, articleID) {
             console.log('error in fetch request for put');
         });
     }
-    // if fetch not checked, we are using xhruest
+    // if fetch not checked, we are using XMLHttpRequest
     else {
-        console.log('xhruest chosen for put');
-        let xhr = new xhruest();
+        console.log('XMLHttpRequest chosen for put');
+        let xhr = new XMLHttpRequest();
         xhr.open('PUT', 'https://httpbin.org/put', true);
         xhr.send(formInput);
         xhr.onload = function() {
@@ -115,7 +115,7 @@ function putRequest(formInput, articleID) {
             }
         };
         xhr.onerror = function() {
-            console.log('error in xhruest for put');
+            console.log('error in XMLHttpRequest for put');
         };
     }
 }
@@ -138,10 +138,10 @@ function deleteRequest(articleID, date) {
             console.log('error in fetch request for delete');
         });
     }
-    // if fetch not checked, we are using xhruest
+    // if fetch not checked, we are using XMLHttpRequest
     else {
-        console.log('xhruest chosen for get');
-        let xhr = new xhruest();
+        console.log('XMLHttpRequest chosen for get');
+        let xhr = new XMLHttpRequest();
         xhr.open('DELETE', `https://httpbin.org/delete?id=${articleID}`, true);
         xhr.send();
         xhr.onload = function() {
@@ -154,7 +154,7 @@ function deleteRequest(articleID, date) {
             }
         };
         xhr.onerror = function() {
-            console.log('error in xhruest for delete');
+            console.log('error in XMLHttpRequest for delete');
         };
     }
 }
