@@ -7,6 +7,15 @@ var sections = Array.from(document.querySelectorAll('.hidden-section'));
 function pageInit() {
     window.addEventListener('scroll', scrollEvent);
     typewriterEffect();
+    document.querySelector('form').addEventListener('submit', (event) => {
+        document.getElementById('form-box').classList.add('hidden')
+        document.getElementById('submit-conf').classList.remove('hidden')
+        contactSubmit(event);
+    });
+    document.querySelector('#send-another').addEventListener('click', () => {
+        document.getElementById('form-box').classList.remove('hidden')
+        document.getElementById('submit-conf').classList.add('hidden')
+    });
 }
 
 // when page is scrolled, we check if each section is on screen
@@ -40,6 +49,31 @@ function typewriterEffect() {
         }
         ind++;
     }, 200);
+}
+
+// sends me an email using EmailJS when a user submits form
+function contactSubmit(e) {
+    e.preventDefault();
+    let form = document.querySelector('form');
+    var formData = new FormData(form);
+    var templateParams = {
+        from_name: DOMPurify.sanitize(formData.get('name')),
+        from_email: DOMPurify.sanitize(formData.get('email')),
+        message: DOMPurify.sanitize(formData.get('message'))
+    };
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+    emailjs.send('service_q4lkyyd', 'template_z9u08dn', templateParams)
+        .then(function(response) {
+        // Handle successful email sending
+        console.log('Email sent!', response.status, response.text);
+        document.getElementById('form-box').classList.add('hidden')
+        document.getElementById('submit-conf').classList.remove('hidden')
+        }, function(error) {
+        // Handle error
+        console.log('Error sending email', error);
+        });
 }
 
 export { pageInit }

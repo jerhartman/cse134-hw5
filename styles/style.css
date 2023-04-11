@@ -43,6 +43,9 @@ https://www.toptal.com/designers/subtlepatterns/inspiration-geometry/
     font-weight: normal;
     font-style: italic;
 }
+.hidden {
+    display: none;
+}
 /* fade in animation, translates text while opacity increases
     used to fade-in sections as they are scrolled to */
 /* @keyframes fade-in {
@@ -402,6 +405,17 @@ dl {
     justify-content: center;
     align-items: center;
 }
+#submit-conf {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--gray-white);
+    border: 0.1rem solid var(--one-in-mil-gray);
+    border-radius: 1rem;
+    padding: 2rem;
+
+}
 #form-box {
     margin-bottom: 5rem;
     background-color: var(--gray-white);
@@ -443,7 +457,7 @@ input[type='text'], input[type='email'], textarea {
 textarea {
     height: 10ch;
 }
-button[type="submit"] {
+button[type="submit"], #send-another {
     padding: 0.6rem 1rem;
     font-size: 0.8rem;
     width: 5rem;
@@ -453,7 +467,10 @@ button[type="submit"] {
     color: var(--gray-white);
     cursor: pointer;
 }
-button[type="submit"]:hover {
+#send-another {
+    width: 7rem;
+}
+button[type="submit"]:hover, #send-another:hover {
     background-color: #555;
     color: var(--one-in-mil-gray);
 
@@ -484,4 +501,7 @@ footer p {
 }
 .fab:hover {
     color: var(--pure-white);
+}
+.hidden {
+    display: none !important;
 }

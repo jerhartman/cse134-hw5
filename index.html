@@ -10,9 +10,19 @@
             })(window,document,'script','dataLayer','GTM-WWKNPQQ');
         </script>
         <!-- End Google Tag Manager -->
+        <!-- email js -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('OqmVdWWe25FNXz5ul');
+            })();
+        </script>
+        <!-- end email js -->
         <meta charset="UTF-8">
         <link rel="stylesheet" href="styles/style.css">
         <script src="https://kit.fontawesome.com/13dffc2d07.js" crossorigin="anonymous"></script>
+        <script src="DOMPurify-main/dist/purify.js"></script>
         <title>Jeremy's portfolio</title>
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -111,9 +121,13 @@
             </section>
             <!-- include a contact form here -->
             <section id="contact" class="hidden-section">
+                <div id="submit-conf" class="hidden">
+                    <p>Thank you so much for your message! I will respond at my earliest convenience.</p>
+                    <button id="send-another">Send another</button>
+                </div>
                 <div id="form-box">
                     <h5>Let's Connect</h5>
-                    <form action="/scripts/submitform.php" method="post">
+                    <form action="" method="post">
                         <fieldset>
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" required maxlength="30">
